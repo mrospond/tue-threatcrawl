@@ -1,0 +1,278 @@
+/* General layout for the start screen */
+.StartScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+}
+
+/* Logo width and height in start screen */
+.Logo {
+    height: 85vh;
+}
+
+/* General layout for left- and right-aligned buttons */
+.leftAlignedButton, .rightAlignedButton {
+    margin: 1vh 1vw;
+    padding: 2vh 2vw;
+    width: 270px;
+    height: 75px;
+    background-color: var(--TCgreen);
+    color: var(--TCgray);
+    font-size: medium;
+    font-weight: bold;
+}
+
+/* Align button to the left */
+.leftAlignedButton {
+    align-self: flex-start;
+}
+
+/* Align button to the right */
+.rightAlignedButton {
+    align-self: flex-end;
+}
+
+/* Changes when hovering left- and right-aligned buttons */
+.leftAlignedButton:hover, .rightAlignedButton:hover {
+    background-color: var(--TCpurple);
+}
+
+/* Layout for the configuration selection screen */
+.ConfigList {
+    width: 70vw;
+    height: 80%;
+    overflow-y: auto;
+}
+
+/* Styling each configuration */
+.ConfigItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 54px);
+    height: 100px;
+    margin: 5px;
+    padding: 0 20px;
+    overflow: hidden;
+    background-color: #FFFFFF11;
+    border: 2px solid #FFFFFF33;
+}
+
+/* Config info box */
+.configInfo {
+    width: 60%;
+    overflow: hidden;
+}
+
+/* Config table styling */
+.configInfoTable {
+    height: fit-content;
+    text-align: left;
+}     
+
+/* Spacing between table cells */
+.configInfoTable > * > td {
+    padding: 5px;
+} 
+
+/* Ensure the header look the same */
+.configInfoTableHeader {
+    min-width: 120px;
+}
+
+/* Layout of config buttons */
+.configButtons {
+    display: flex;
+    height: 100%;
+    width: 40%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Config button styling */
+.configButton {
+    padding: 5px 2vw;
+    height: 50px;
+    background-color: var(--TCgreen);
+    color: var(--TCgray);
+    font-size: medium;
+    font-weight: bold;
+}
+
+/* Changes when hovering config buttons */
+.configButton:hover {
+    background-color: var(--TCpurple);
+}
+
+/* Layout for the content of the different tab screens */
+.Tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* General layout for the tabscreen */
+.TabScreen {
+    flex-grow: 1;
+    width: fit-content; 
+    height: fit-content;
+    scroll-behavior: smooth;
+}
+
+
+/* Layout for the tab items in TabScreen */
+.Tab {
+    font-weight: bold;
+}
+
+/* Layout for the content of each tabs */
+.TabContent {
+    width: fit-content;
+    max-height: 82vh;
+    overflow-y: auto;
+}
+
+/*::-webkit-scrollbar {
+    width: 0;  // Remove scrollbar space 
+    background: transparent;  // Optional: just make scrollbar invisible 
+}*/
+
+.TimeZoneSelector {
+    z-index: 10;
+}
+
+/* Layout for the confirmation buttons */
+.ConfirmationButtons {
+    width: fit-content;
+    max-height: 20vh;
+    bottom: 1em;
+    position: fixed;     
+    justify-content: center;            
+    align-items: center;
+}
+
+/* Layout for the elements in preferences tab */
+.PreferencesTab {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    color: var(--TCgray);
+    overflow-y: auto;
+}
+
+/* Layout for the child items of configuration tab */
+.PreferencesTab > * {
+    margin: .8vh 1vw;
+    width: 50vw;
+}
+
+/* Layout for the elements in configuration tab */
+.ConfigurationTab {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    color: var(--TCgray);
+    overflow-y: auto;
+}
+
+/* Layout for the child items of configuration tab */
+.ConfigurationTab > * {
+    margin: .8vh 1vw;
+    width: 70vw;
+}
+
+/* Layout for the tab Keywords */
+.KeywordsTab {
+    display: flex;
+    justify-content: center;
+}
+
+/* Layout for child items of keywords tab */
+.KeywordsTab > * {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    justify-content: center;
+}
+
+/* Layout for the individual column for keywords */
+.KeywordColumn {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1vw;
+}
+
+.KeywordPaper {
+    padding: 0vh 1vw;
+    padding-bottom: 3vh;
+}
+
+.KeywordTitle {
+    text-align: center;
+    text-transform:uppercase;
+    font-weight: 800;
+    font-size: larger;
+}
+
+.KeywordInputSubmission {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.KeywordInputSubmission > *{
+    margin: 0vw .5vw;
+}
+
+p {
+    margin-top: -.8em;
+    color: var(--TCpurple);
+}
+
+.KeywordInputButton {
+    font-weight: 600;
+}
+
+.clear {
+    margin-top: 2vh;
+}
+
+.ScheduleTab {
+    margin-top: 2vh;
+    width: 70vw;
+    height: inherit;
+}
+
+.Schedule {
+    height:70vh;
+}
+
+.tc-button {
+    color: var(--TCgray);
+    background: var(--TCgreen);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.flex-container > * {
+    margin: .5em;
+}

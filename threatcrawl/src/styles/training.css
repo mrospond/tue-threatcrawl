@@ -1,0 +1,175 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* General layout for the training screen */
+.TrainingScreen {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    --sidebarWidth: 20vw;
+}
+
+/* Layout for all children div's in this screen */
+.TrainingScreen > * {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    height: inherit;
+}
+
+/* Web viewer layout */
+.WebViewer {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+/* Training screen Web viewer layout */
+.TSWebViewer {
+    position: relative;
+    width: calc(100vw - var(--sidebarWidth));
+    height: 100vh;
+    display:  flex;
+}
+
+/* Double check Web viewer layout */
+.DCWebViewer {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    display:  flex;
+}
+
+/* Layout for the shown web page in web viewer */
+.WebPage {
+    padding: 5vh 5vw;
+}
+
+#viewer {
+    width: 100%;
+    height: 100%;
+    border: unset;
+}
+
+#LoadedWebPage * {
+    cursor: default;
+    max-width: calc(100vw - var(--sidebarWidth));
+}
+
+/* Layout for the sidebar */
+.TrainingSidebar{
+    display: flex;
+    flex-direction: column;
+    width: var(--sidebarWidth); 
+    height: 100vh;
+    background-color: var(--TCgray);
+    z-index: 100;
+    position: absolute;
+    right: 0;
+}
+
+/* Layout for the child elements in the sidebar */
+.TrainingSidebar > * {
+    margin: 1vh 1.5vw;
+}
+
+/* Section titles layout */
+.SectionTitle {
+    text-align: left;
+    font-size: larger;
+    color: white;
+    font-weight: 600;
+}
+
+/* General layout for labels */
+.Labels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Labels > * {
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+    margin-right: .5vw;
+}
+
+.label {
+    padding: .5em;
+    border-radius:.4em;
+    cursor: pointer;
+    font-weight:bolder;
+}
+
+.selected {
+    border: 3px solid rgba(255, 255, 255, 0.3)
+}
+
+.highlight {
+    border: 2px solid rgba(0,0,0, 0.25);
+}
+
+/* Layout for the confirmation buttons */
+.ConfirmationStructureButton {
+    padding: 1vh 1vw;
+    background-color: var(--TCgreen);
+    color: var(--TCgray);
+    font-weight: bold;
+}
+
+.ConfirmationStructureButton:hover {
+    background-color: var(--TCpurple);
+}
+
+.GoBack {
+    border-radius: .5em;
+    width: 15vw;
+}
+
+.DoubleCheckButtons > * {
+    width: 270px;
+    margin: 1vh 1vw;
+    padding: 2vh 2vw;
+    background-color: var(--TCgreen);
+    color: var(--TCgray);
+    font-weight: bold;
+    font-size:medium;
+}
+
+.DoubleCheckButtons > *:hover {
+    background-color: var(--TCpurple);
+}
+
+.DoubleCheck {
+    display: flex;
+    flex-direction: column;
+}
+
+.DoubleCheckButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 10;
+    background-color: var(--TCgray);
+}
+
+.UtilityToggle * {
+    display: flex;
+    flex-grow: 1;
+}
+
+.UtilityToggle *.Mui-selected {
+    background-color: var(--TCpurple);
+    color: black; 
+    font-weight: 700;
+}
+
+.UtilityToggle *.Mui-selected:hover {
+    background-color: var(--TCpurple);
+    color: black; 
+    font-weight: 700;
+    cursor: auto;
+}
