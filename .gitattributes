@@ -1,0 +1,2 @@
+threatcrawl_1.0.0_amd64.deb filter=lfs diff=lfs merge=lfs -text
+threatcrawl/node_modules/electron/dist/electron filter=lfs diff=lfs merge=lfs -text
